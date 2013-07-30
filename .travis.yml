@@ -1,4 +1,6 @@
 language: python
 python:
-  - "2.6"
+- '2.6'
 script: make release-ppa
+env:
+  secure: NJ9rI5qy8J64ETX1eMV7cxZqkl/FmA1cfeqXvCICoueDvkja3bxlZtwxDP4aRi6h7P9PxHTMJt3iWl7q+9rmX/tegkVCSXyGB8hyHhtcyofvrPHPa054jpL02a2zAG2t+Lv+gFcaEEbUdfi1lbyVlzidw9g6ZF8ssLVsZaZ8TBw=
