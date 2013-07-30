@@ -1,7 +1,4 @@
 language: python
 python:
-  - "3.3"
-  - "2.7"
   - "2.6"
-script: yes | debuild -S
-before_script: sudo apt-get -y update && sudo apt-get -y install devscripts build-essential
+script: make release-ppa
