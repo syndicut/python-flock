@@ -1,6 +1,13 @@
 language: python
 python:
 - '2.6'
-script: make release-ppa
+before_script:
+- sudo apt-get -y update && sudo apt-get -y install devscripts build-essential equivs
+- sudo mk-build-deps -i
+- gpg --import $PPA_KEY_FILE
+script: yes | debuild -S -I -k$PPA_KEY_ID -sgpg -p"gpg --passphrase"
+after_success: debrelease -S --dput ppa:$PPA_NAME
 env:
-  secure: I5cFg4H4bTfSBtMFVySfIV+y+fJUa2Sro4vZbuFab0UolwlDYs2o6vcUTg0WYF3qMaBd0hakEzM3nANo1WjmSQjBGeP2cDrpjv9hVvAGHXHvSVqhSRmGEMlSkioc8ApxeLXScK0mqtI8hmmxuzWK+ApiXfsm+uBp8t97D2SXPMM=
+  global:
+  - secure: iIcAJFLkhwGUZW0Z5sHDH2HU1l57sj2YjfAQnD+RLh4+H8lt/ZJ8FhGsjELcOR9dvHHOiPIjB80R0McmCeRW720+ja5imHK/V2y9H0OKxLI9LtG8hGkVTvdIfrNH58dexUA+kn1RnSmLmsLyzNyY9T4q4oU1U6eUBd31SIKkRsA=
+  - PPA_KEY_ID=467C4B6F PPA_KEY_FILE=.travis/python-flock-ppa.gpg PPA_NAME=syndicut/python-flock
