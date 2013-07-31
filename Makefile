@@ -6,3 +6,4 @@ release-ppa:
 	env | grep DEB >> ~/.devscripts
 	yes | debuild -S -I -us -uc
 	rm ~/.devscripts
+	debrelease --dput ppa:syndicut/python-flock
