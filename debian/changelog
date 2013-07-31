@@ -1,3 +1,9 @@
+zk-flock (0.1-beta18) lucid; urgency=low
+
+  * Added exit code option
+
+ -- Rashit Azizbaev <syndicut@yandex-team.ru>  Wed, 31 Jul 2013 18:10:05 +0400
+
 zk-flock (0.1-beta16) lucid; urgency=low
 
   * transport zookeeper module into watcher handler (looks like bug) 
