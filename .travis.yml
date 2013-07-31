@@ -3,4 +3,5 @@ python:
 - '2.6'
 script: make release-ppa
 env:
-  secure: NJ9rI5qy8J64ETX1eMV7cxZqkl/FmA1cfeqXvCICoueDvkja3bxlZtwxDP4aRi6h7P9PxHTMJt3iWl7q+9rmX/tegkVCSXyGB8hyHhtcyofvrPHPa054jpL02a2zAG2t+Lv+gFcaEEbUdfi1lbyVlzidw9g6ZF8ssLVsZaZ8TBw=
+  - secure: I5cFg4H4bTfSBtMFVySfIV+y+fJUa2Sro4vZbuFab0UolwlDYs2o6vcUTg0WYF3qMaBd0hakEzM3nANo1WjmSQjBGeP2cDrpjv9hVvAGHXHvSVqhSRmGEMlSkioc8ApxeLXScK0mqtI8hmmxuzWK+ApiXfsm+uBp8t97D2SXPMM=
+  - PPA_KEY_FILE=.travis/python-flock-ppa.gpg
